@@ -1,3 +1,4 @@
+// ======================= basic object without class ==============================
 // person object
 const person ={
     // property
@@ -10,3 +11,16 @@ const person ={
     }
 }
 console.log(person.fullName())
+
+// ====================== define a class ===================================
+class User{
+    constructor(name,password,email){
+        this.name = name;
+        this.password = password;
+        this.email = email;
+    }
+};
+
+// crate object using class
+const userOne = new User('Harshana',1234,"harshana123@gamil.com");
+console.log(userOne);

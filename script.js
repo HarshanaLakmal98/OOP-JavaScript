@@ -44,3 +44,14 @@ const personOne = new Person('Harshana',"lakmal",25);
 console.log(personOne);
 // called method 
 console.log(personOne.fullName());
+
+//===================== create Phone class=====================
+class Phone{
+    constructor(brand,year){
+        this.brand = brand;
+        this.year = year;
+    }
+}
+// create mobileOne object
+const phoneOne = new Phone('Apple',2023);
+console.log(phoneOne);

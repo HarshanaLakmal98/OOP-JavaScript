@@ -1,57 +1,27 @@
-// ======================= basic object without class ==============================
-// person object
-const person ={
-    // property
-    firstName : "Lakmal",
-    lastName : "Senewirathne",
-    email : "lakmal123@gmail.com",
-    // method
-    fullName : function(){
-        return `Full Name Is: ${this.firstName} ${this.lastName}`
-    }
-}
-console.log(person.fullName())
-
-// ====================== define a class ===================================
+// create a User class
 class User{
-    constructor(name,password,email){
+    constructor(name,email,){
         this.name = name;
-        this.password = password;
         this.email = email;
     }
-};
-
-// crate object using class
-const userOne = new User('Harshana',1234,"harshana123@gamil.com");
+    logIn(){
+        console.log(`${this.name} LoggedIn`);
+        return this;
+    }
+    wellCome(){
+        console.log(`Hello ${this.name}`)
+        return this;
+    }
+    logOut(){
+        console.log(`${this.name} LoggedOut`);
+        return this;
+    }
+    goodBye(){
+        console.log(`Good Bye ${this.name}`)
+    }
+}
+// create userOne object 
+const userOne = new User('Harshana',"harshana123@gmail.com");
 console.log(userOne);
 
-//  ======================= add method to class ====================
-
-class Person{
-    constructor(fname,lname,age){
-        this.firstName = fname;
-        this.lastName = lname;
-        this.age = age;
-    }
-    // create method
-    fullName(){
-        return `Full Name is : ${this.firstName} ${this.lastName}`
-    }
-}
-// crate personOne object using person class
-
-const personOne = new Person('Harshana',"lakmal",25);
-console.log(personOne);
-// called method 
-console.log(personOne.fullName());
-
-//===================== create Phone class=====================
-class Phone{
-    constructor(brand,year){
-        this.brand = brand;
-        this.year = year;
-    }
-}
-// create mobileOne object
-const phoneOne = new Phone('Apple',2023);
-console.log(phoneOne);
+userOne.logIn().wellCome().logOut().goodBye();

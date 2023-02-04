@@ -8,20 +8,34 @@ class User{
         console.log(`${this.name} LoggedIn`);
         return this;
     }
-    wellCome(){
-        console.log(`Hello ${this.name}`)
-        return this;
-    }
+   
     logOut(){
         console.log(`${this.name} LoggedOut`);
         return this;
     }
-    goodBye(){
-        console.log(`Good Bye ${this.name}`)
-    }
+  
 }
 // create userOne object 
 const userOne = new User('Harshana',"harshana123@gmail.com");
 console.log(userOne);
 
-userOne.logIn().wellCome().logOut().goodBye();
+userOne.logIn().logOut()
+
+
+// ========================= Inheritance =================================
+class NewUser extends User{
+    welcome(){
+        console.log(`Warmly Welcome ${this.name}`)
+        return this;
+    }
+    goodBye(){
+        return `Good Bye ${this.name}`
+    }
+}
+
+// create new object
+const newUserOne = new NewUser('Harry','harry123@gmail.com');
+console.log(newUserOne);
+
+// method chaining
+newUserOne.logIn().welcome()
